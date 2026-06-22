@@ -73,24 +73,21 @@ Create an isolated Python virtual environment and pull structural dependencies:
 python3 -m venv venv
 source venv/bin/activate  # On Windows use: venv\Scripts\activate
 pip install -r requirements.txt
-
 ```
 
-### 3. Setup Secrets File
+### 3. Setup Environment Configuration
+The project utilizes a `.env` file to securely manage blockchain nodes and target wallets without exposing secrets to version control. Clone the provided repository template to create your local configurations:
 
-Create a `.env` file inside the root repository:
+```bash
+cp .env.example .env
+```
+
+Now, open the newly created `.env` file and insert your dedicated tracking parameters:
 
 ```env
-# Network and Node Gateway
-BSC_RPC_URL=[https://bsc-dataseed.binance.org/](https://bsc-dataseed.binance.org/)
-
-# Cryptographic Contract Addresses (Default: BSC-USD Tether)
+BSC_RPC_URL=https://bsc-dataseed.binance.org/
 USDT_CONTRACT_ADDRESS=0x55d398326f99059ff775485246999027b3197955
-
-# Target Monitoring Profile
-TARGET_WALLET_ADDRESS=0x25edC5F581B58F4629ffb862bdc75a2872A5a7ca
-
-# Engine Telemetry Polling Frequency (Seconds)
+TARGET_WALLET_ADDRESS=0xYourTargetWalletAddressHere
 CHECK_INTERVAL_SECONDS=5
 
 ```
