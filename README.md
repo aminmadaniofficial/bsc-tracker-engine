@@ -60,7 +60,7 @@ bsctracker/
 ### 1. Clone the Repository
 
 ```bash
-git clone [https://github.com/yourusername/bsctracker.git](https://github.com/yourusername/bsctracker.git)
+git clone https://github.com/aminmadaniofficial/bsctracker.git
 cd bsctracker
 
 ```
