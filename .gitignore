@@ -1,0 +1,14 @@
+# Ignore local environment variables (CRITICAL FOR SECURITY)
+.env
+
+# Ignore Python virtual environments
+venv/
+.venv/
+env/
+
+# Ignore compiled Python files (Cache)
+**/__pycache__/
+*.pyc
+
+# Ignore application runtime logs
+*.log
